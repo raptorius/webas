@@ -1,0 +1,50 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}
+    Webas
+{% endblock %}
+
+{% block stylesheets %}
+    <!-- Bootstrap core CSS -->
+    <link href="{{ asset('bundles/webaswebas/css/bootstrap.css') }}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ asset('bundles/webaswebas/css/style.css') }}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 site">
+                <div class="site-title">
+                    <a href="{{ path('webas_webas_homepage') }}"><h2><b>Webas</b> - Mindziaus awesome webas</h2></a>
+                </div>
+                {% block content %}{% endblock %}
+                <div class="site-footer">
+                    <p>&#169; Mindaugas Shirvys</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="{{ asset('bundles/webaswebas/js/bootstrap.min.js') }}"></script>
+
+    <!--BACKSTRETCH-->
+    <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+    <script type="text/javascript" src="{{ asset('bundles/webaswebas/js/jquery.backstretch.min.js') }}"></script>
+    <script>
+        $.backstretch("{{ asset('bundles/webaswebas/img/bg01.jpg') }}", {speed: 500});
+    </script>
+{% endblock %}

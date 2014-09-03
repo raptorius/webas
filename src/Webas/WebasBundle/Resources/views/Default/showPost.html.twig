@@ -1,0 +1,12 @@
+{% extends "@WebasWebas/layout.html.twig" %}
+
+{% block content %}
+
+    {% for comment in comments %}
+        <div class="post">
+            <h4>{{ comment.user }}</h4>
+            <small>{{ comment.comment }} <br/> <br/> {{ comment.dateTime|date('Y-m-d H:i:s') }}</small>
+        </div>
+    {% endfor %}
+
+{% endblock %}

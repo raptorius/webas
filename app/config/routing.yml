@@ -1,0 +1,4 @@
+webas_webas:
+    resource: "@WebasWebasBundle/Resources/config/routing.yml"
+    prefix:   /
+

@@ -1,0 +1,15 @@
+{% extends "@WebasWebas/layout.html.twig" %}
+
+{% block content %}
+
+    <form action="createPost.php" method="post" >
+        <fieldset>
+            <legend> Iveskite posto duomenis </legend>
+            <label> user: </label><input type="text" name="Vardas" style="width:200px"><br>
+            <label> link: </label><input type="text" name="Linkas" style="width:200px" ><br>
+            <label> description: </label><textarea name="Komentaras" style="width:200px" ></textarea><br>
+            <input type="submit" value="Atlikta">
+        </fieldset>
+    </form>
+
+{% endblock %}

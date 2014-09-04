@@ -3,6 +3,7 @@
 namespace Webas\WebasBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Webas\WebasBundle\Entity\Post;
 
 class DefaultController extends Controller
 {
@@ -40,4 +41,17 @@ class DefaultController extends Controller
             'comments' => $comments
         ]);
     }
+
+
+
+
+    public function createPostAction()
+    {
+        $repo = $this->get('doctrine')->getRepository('WebasWebasBundle:Post');
+
+        return $this->render('WebasWebasBundle:Default:createPost.html.twig', [
+            'post' => $repo
+        ]);
+    }
+
 }

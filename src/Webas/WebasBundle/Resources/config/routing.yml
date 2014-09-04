@@ -5,3 +5,7 @@ webas_webas_homepage:
 webas_webas_show_post:
     path:     /post/{post}
     defaults: { _controller: WebasWebasBundle:Default:showPost }
+
+webas_webas_create_post:
+    path:     /create_post
+    defaults: { _controller: WebasWebasBundle:Default:createPost }
